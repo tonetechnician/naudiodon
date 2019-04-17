@@ -19,13 +19,14 @@ This fork attempts to incorporate ASIO playback as per issue [#28](https://githu
 
 In particular, it attempts to integrate the ASIO driver as seamlessly as possible. It also provides ASIO specific functions that may be used to gain more information about the channel layout and arrangements. The specific changes are given in below:
 
-1. ASIO drivers are able to be seen within the .getDevices() functions.
-2. The ASIO Host API is able to be seen in .getHostAPIs()
-3. The ASIO driver implements new function .getAvailableBufferSizes()
-4. The ASIO driver implements new function .showControlPanel()
-5. The ASIO driver implements new function .getInputChannelNames()
-6. The ASIO driver implements new function .getOutputChannelNames()
-7. The ASIO driver implements new function .setStreamSampleRate()
+1. Rebuilds the portaudio source code to enable ASIO capability
+2. ASIO drivers are able to be seen within the .getDevices() functions.
+3. The ASIO Host API is able to be seen in .getHostAPIs()
+4. The ASIO driver implements new function .getAvailableBufferSizes()
+5. The ASIO driver implements new function .showControlPanel()
+6. The ASIO driver implements new function .getInputChannelNames()
+7. The ASIO driver implements new function .getOutputChannelNames()
+8. The ASIO driver implements new function .setStreamSampleRate()
 
 This document will be updated as changes are implemented. 
 
