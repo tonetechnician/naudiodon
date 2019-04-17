@@ -14,6 +14,21 @@ This library has been tested on MacOS X 10.11, Windows 10, Linux Ubuntu Trusty a
 
 Note: This is a server side library. It is not intended as a means to play and record audio via a browser.
 
+## Changes in this fork
+This fork attempts to incorporate ASIO playback as per issue [#28](https://github.com/Streampunk/naudiodon/issues/28)
+
+In particular, it attempts to integrate the ASIO driver as seamlessly as possible. It also provides ASIO specific functions that may be used to gain more information about the channel layout and arrangements. The specific changes are given in below:
+
+1. ASIO drivers are able to be seen within the .getDevices() functions.
+2. The ASIO Host API is able to be seen in .getHostAPIs()
+3. The ASIO driver implements new function .getAvailableBufferSizes()
+4. The ASIO driver implements new function .showControlPanel()
+5. The ASIO driver implements new function .getInputChannelNames()
+6. The ASIO driver implements new function .getOutputChannelNames()
+7. The ASIO driver implements new function .setStreamSampleRate()
+
+This document will be updated as changes are implemented. 
+
 ## Installation
 
 Install [Node.js](http://nodejs.org/) for your platform and make sure that node is able to build native modules with [node-gyp](https://github.com/nodejs/node-gyp). This software has been developed against the long term stable (LTS) release. For ease of installation with other node packages, this package includes a copy of the dependent PortAudio library and so has no prerequisites.
